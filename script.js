@@ -22,6 +22,10 @@ function multiplier(){
 function divider(){
     let num1 = parseInt(prompt("Enter the first number: "));    
     let num2 = parseInt(prompt("Enter the second number: "));
+    if(num2 == 0){
+        document.getElementById("result").innerHTML = "Math error : Divide by zero";
+        return;
+    }
     num3 = num1 / num2; 
     document.getElementById("result").innerHTML = "The division of the two numbers is: " + num3;
 }
@@ -37,21 +41,27 @@ function bubbleSort(){
        arr.push(parseInt(prompt("Enter element " + (i + 1) + ": ")));
    }
     let n = arr.length;
-    let steps = "<ol>";
+    
     for(let i=0;i<n;i++){
         for(let j=0;i<n;j++){
             if(arr[j]>arr[j+1]){
                 let temp = arr[j];
                 arr[j] = arr[j+1];
                 arr[j+1] = temp;
-                steps+= "<li>"
-                for(let k=0;k<n;k++){
-                    steps+= arr[k] + " ";
-                }
-                steps=+ "</li>";
+                
+                
+                
             }
         }
     }
-    steps+= "</ol>";
-    document.getElementById("result").innerHTML = steps;
+    let sorted = "["
+    for(let i=0;i<n;i++){
+        if(i == n-1){
+            sorted += arr[i] + "]";
+        }else{
+            sorted += arr[i] + ", ";
+        }
+        
+    }
+    document.getElementById("result").innerHTML = "Sorted array is: " + sorted;
 }
