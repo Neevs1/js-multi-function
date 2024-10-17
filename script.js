@@ -34,3 +34,15 @@ function clearResult(){
     document.getElementById("result").innerHTML = "";
 }
 
+function input(){
+    return document.getElementById("inp").value;
+}
+function mod(){
+    document.getElementById("result").innerHTML = "Enter first number and hit enter";
+    let num1 = parseInt(document.getElementById("enter").addEventListener("click", input()));
+    document.getElementById("result").innerHTML = "Enter second number and hit enter";
+    let num2 = parseInt(document.getElementById("enter").addEventListener("click", input()));
+    document.getElementById("result").innerHTML = "Remainder is " + num1 % num2;
+    
+
+}

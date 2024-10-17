@@ -10,16 +10,26 @@
 </head>
 <body>
      <h1>Welcome to multifunction website</h1>
-     <p id="UserName"></p>
+     <p id="Welcome"></p>
+     <input type="text" id="inp">
+     <button id="enter">Enter</button>
      <div id="Menu">
         <button id="btn1" onclick="adder()">Add</button>
         <button id="btn2" onclick="subtractor()">Subtract</button>
         <button id="btn3" onclick="multiplier()">Multiply</button>
         <button id="btn4" onclick="divider()">Divide</button>
-        <!--<button id="btn5" onclick="quickSort()">Step-by-step quickSort</button> -->
+        <br>
+        <button onclick = "mod()">Remainder</button>
+        <button id="btn5" onclick="quickSort()">Step-by-step quickSort</button>
+        <button id="btn6" onclick="mergeSort()">Step-by-step mergeSort</button>
+        <button id="btn7" onclick="clearResult()">Clear</button>
 
      </div>
      <p id="result"></p>
+     <script>
+        const UserName = prompt("Enter your name: ");
+        document.getElementById("Welcome").innerHTML = "Welcome " +UserName  + "!";
+     </script>
 
 </body>    
 </html>
