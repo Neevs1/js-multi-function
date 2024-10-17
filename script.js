@@ -34,34 +34,3 @@ function clearResult(){
     document.getElementById("result").innerHTML = "";
 }
 
-function bubbleSort(){
-   let length =  prompt("Enter length of array: ");
-   let arr = [];
-   for (let i = 0; i < length; i++){
-       arr.push(parseInt(prompt("Enter element " + (i + 1) + ": ")));
-   }
-    let n = arr.length;
-    
-    for(let i=0;i<n;i++){
-        for(let j=0;i<n;j++){
-            if(arr[j]>arr[j+1]){
-                let temp = arr[j];
-                arr[j] = arr[j+1];
-                arr[j+1] = temp;
-                
-                
-                
-            }
-        }
-    }
-    let sorted = "["
-    for(let i=0;i<n;i++){
-        if(i == n-1){
-            sorted += arr[i] + "]";
-        }else{
-            sorted += arr[i] + ", ";
-        }
-        
-    }
-    document.getElementById("result").innerHTML = "Sorted array is: " + sorted;
-}
